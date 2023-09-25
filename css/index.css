@@ -1,0 +1,537 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'DM Sans', sans-serif;
+}
+
+
+.top-header-mid-side:before{
+    content: '';
+    width: 48px;
+    height: 14px;
+    position: absolute;
+    background-image: url('../image/shape/shape-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    top: 35%;
+    left:30%;
+    z-index: 2;
+}
+
+
+
+.top-header-mid-side:after{
+    content: '';
+    width: 48px;
+    height: 14px;
+    position: absolute;
+    background-image: url('../image/shape/shape-2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    top: 38%;
+    left:73%;
+}
+
+nav#navigation_section {
+  z-index: 500 !important;
+}
+
+.btn-5 {
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #058134;
+    cursor: pointer;
+    position:relative;
+    overflow:hidden;
+    margin: 0 px;
+    padding: 6px 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    z-index: 2;
+  }
+  
+  .btn-5:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background-color : #309255;
+    left: 0;
+    bottom: 0;
+    transition: all .5s;
+    z-index: -1;
+
+  }
+  
+  .btn-5:hover:before {
+    width: 100%;
+  }
+
+
+/* button css code */
+  .btn-6 {
+    text-align: center;
+    display: inline-block;
+    background-color: #309255;
+    border:1px solid #309255;
+    cursor: pointer;
+    position:relative;
+    color:white;
+    overflow:hidden;
+    margin: 0 px;
+    padding: 6px 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    z-index: 2;
+  }
+  
+  .btn-6:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background-color : white;
+    left: 0;
+    bottom: 0;
+    transition: all .5s;
+    z-index: -1;
+
+  }
+
+  .btn-6:hover{
+    color:black;
+  }
+  
+  .btn-6:hover::before {
+    width: 100%;
+    
+  }
+
+
+  /* end button css code */
+
+
+
+.active-header {
+  color: #309255;
+}
+
+.active-header::before{
+  content:'';
+  position: absolute;
+  background-image: url('/public/image/shape/shape-3.png');
+  width: 70px;
+  height: 5px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  left: 2px;
+  bottom: -1px;
+}
+
+
+.hero-title::after{
+  content: '';
+  position: absolute;
+  background-image: url('/public/image/shape/shape-4.png');
+  width: 214px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  bottom: -25px;
+  left: 55px;
+  z-index:1;
+}
+
+
+
+.btn-7 {
+  text-align: center;
+  display: inline-block;
+  background-color: #309255;
+  border:1px solid #309255;
+  cursor: pointer;
+  position:relative;
+  color:white;
+  overflow:hidden;
+  margin: 0 px;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.btn-7:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background-color : white;
+  left: 0;
+  bottom: 0;
+  transition: all .5s;
+  z-index: -1;
+
+}
+
+.btn-7:hover{
+  color:black;
+}
+
+.btn-7:hover::before {
+  width: 100%;
+  
+}
+
+
+
+
+.left-side-top-title::after{
+  content: '';
+  
+}
+
+
+
+.updown-animation {
+  animation-name: infiniteUpDown;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+
+
+@keyframes infiniteUpDown {
+    0%{
+      transform: translateY(0px);
+    }
+
+    50%{
+      transform: translateY(-30px);
+    }
+
+    100%{
+      transform: translateY(0px);
+    }
+}
+
+
+.leftRight-animation {
+  animation-name: infiniteLeftRight;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+
+
+@keyframes infiniteLeftRight {
+  0%{
+    transform: translateX(0px);
+  }
+
+  50%{
+    transform: translateX(-20px);
+  }
+
+  100%{
+    transform: translateX(0px);
+  }
+}
+
+
+
+.course-left-side-text::before{
+  position:absolute;
+  content: '';
+  background-image: url('/public/image/shape/shape-11.png');
+  width: 122px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  left: 17%;
+  top: 85%;
+}
+
+.activeC{
+  border-color: #309255;
+  color: #309255;
+}
+
+.owl-pagination {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  display: none;
+}
+
+
+.owl-carousel {
+  display: flex !important; /* To override display:block I added !important */
+  flex-direction: row;
+  justify-content: center;
+  margin:auto;
+  text-align: center; /* To center the carousel */
+}
+
+.course-image:hover {
+  transform: scale(1.1);
+}
+
+
+
+.btn-8 {
+  text-align: center;
+  display: inline-block;
+  background-color: #309255;
+  border:1px solid #309255;
+  cursor: pointer;
+  position:relative;
+  color:white;
+  overflow:hidden;
+  margin: 0 px;
+  padding: 18px 40px;
+  border-radius: 5px;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.btn-8:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background-color : white;
+  left: 0;
+  bottom: 0;
+  transition: all .5s;
+  z-index: -1;
+
+}
+
+.btn-8:hover{
+  color:black;
+}
+
+.btn-8:hover::before {
+  width: 100%;
+  
+}
+
+.owl-prev {
+  position: absolute;
+  left: -26px;
+  background: green !important;
+}
+
+.owl-next {
+  position: absolute;
+  right: -26px;
+}
+
+
+
+.btn-9 {
+  text-align: center;
+  display: inline-block;
+  background-color: #309255;
+  border:1px solid #309255;
+  cursor: pointer;
+  position:relative;
+  color:white;
+  overflow:hidden;
+  margin: 0 px;
+  padding: 18px 40px;
+  border-radius: 5px;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.btn-9:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background-color : white;
+  left: 0;
+  bottom: 0;
+  transition: all .5s;
+  z-index: -1;
+
+}
+
+.btn-9:hover{
+  color:black;
+}
+
+.btn-9:hover::before {
+  width: 100%;
+  
+}
+
+.instructor::after{
+  position: absolute;
+  content: '';
+  background-image: url('/public/image/shape/shape-4.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 210px;
+  height: 21px;
+  left: 41%;
+  top: 95%;
+}
+
+
+
+
+.download-border{
+  border-radius: 19px;
+}
+
+#blog-sub-menu{
+  z-index: 1000 !important;
+  top: 35px;
+  left: 29px;
+}
+
+a.single_submenu_item {
+  border-bottom: 1px solid #00bb0026;
+}
+
+
+#blog-sub-menu2{
+  z-index: 1000 !important;
+  top: 35px;
+  left: 17px;
+}
+
+#blog-sub-menu3{
+  z-index: 1000 !important;
+  top: 35px;
+  left: 20px;
+}
+
+
+.edule_text::before{
+  content: '';
+  position: absolute;
+  width: 122px;
+  height: 13px;
+  background-image: url('/public/image/shape/shape-4.png');
+  top: 46px;
+  left: 31%;
+}
+
+
+
+
+
+
+
+
+.test{
+  color:black;
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 50px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+  .instructor::after{
+    display: none;
+  }
+  .edule_text::before{
+     display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* preloader  */
+/* preloader css */
+#preloader {
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid #309255;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 0.5s linear infinite;
+  /* Safari */
+  animation: spin 0.5s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+
+#progress1 {
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid #309255;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 0.5s linear infinite;
+  /* Safari */
+  animation: spin 0.5s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+      -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* end preloader css */
